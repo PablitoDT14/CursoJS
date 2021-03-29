@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #93a3ce;
+    h1{
+        box-sizing: content-box;
+        padding: 10px ;
+        color: #753232;
+        text-decoration: underline;
+    }
+    form{
+        .card_selector, .quota_selector{
+            background-color: rgb(217, 233, 238);
+            width: 30vw;
+        }
+        .amount_label{
+            background-color: rgb(217, 233, 238);
+            width: 40vw;
+        }
+    }
+}
+

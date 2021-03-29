@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #93a3ce;
+}
+body h1 {
+  box-sizing: content-box;
+  padding: 10px;
+  color: #753232;
+  text-decoration: underline;
+}
+body form .card_selector, body form .quota_selector {
+  background-color: #d9e9ee;
+  width: 30vw;
+}
+body form .amount_label {
+  background-color: #d9e9ee;
+  width: 40vw;
+}
+
+/*# sourceMappingURL=style.css.map */
