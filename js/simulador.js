@@ -23,16 +23,16 @@ let cantidadCuotas;
 let valorPosible;
 
 /*Función para validar el ingreso de infornmación de parte del usuario*/
-function ingresarValidar(param1, param2, param3, param4){
+function ingresarValidar(textoIngreso, minimo, maximo, textoValidacion){
     let dato;
     do{
-        dato = parseInt(prompt(param1));
-        if((dato>=param2)&&(dato<=param3)){
+        dato = parseInt(prompt(textoIngreso));
+        if((dato>=minimo)&&(dato<=maximo)){
             valorPosible=true;
         }
         else{
             valorPosible= false;
-            alert(param4);
+            alert(textoValidacion);
         }
     }while (valorPosible===false);
     return dato;
