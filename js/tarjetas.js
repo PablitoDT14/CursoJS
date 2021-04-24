@@ -1,5 +1,3 @@
-//Inicializo el array de objetos de tipo tarjeta
-const tarjetas = [];
 alert('Bienvenido a la terminal de carga de tarjetas para el sistema de ventas.');
 let option;
 let salida=false;
@@ -14,6 +12,58 @@ class Tarjeta {
     }
 }
 
+let tarjetas = JSON.parse(localStorage.getItem('tarjetas'));
+
+if (!tarjetas){
+    tarjetas=[];
+}
+
+const altaTarjeta = document.getElementById('alta-tarjeta');
+const inputTarjeta = document.getElementById('input-tarjeta');
+const inputCuotas = document.getElementById('input-cuotas');
+const inputRecargo = document.getElementById('input-recargo');
+const listaTarjetas = document.getElementById('tarjetas-list');
+
+const obtenerTarjetas =() => {
+    return tarjetas;
+}
+
+const crearTarjeta = tarjeta =>{
+    tarjetas.push(tarjeta)
+}
+
+const mostrarTarjetas = (tarjetas) =>{
+    for (let i=0; i< tarjetas.length; i++){
+        let tarj = document.createElement('li')
+        tarj.textContent =  `La tarjeta ${tarjetas[i].tipoTarjeta} tiene
+         un ${tarjetas[i].recargo}% a partir de la cuota ${tarjetas[i].cuotas}`
+         listaTarjetas.appendChild(tarj);
+    }
+    
+}
+mostrarTarjetas(tarjetas)
+
+altaTarjeta.addEventListener('submit', (event) =>{
+    event.preventDefault();
+    const tipoTarjeta= inputTarjeta.value;
+    const cuotas = inputCuotas.value;
+    const recargo = inputRecargo.value;
+
+    const tarjeta = new Tarjeta(tipoTarjeta, cuotas, recargo);
+    crearTarjeta(tarjeta);
+    localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
+
+    inputTarjeta.value = '';
+    inputCuotas.value = '';
+    inputRecargo.value = '';
+
+    let tarj = document.createElement('li');
+    tarj.textContent =  `La tarjeta ${tipoTarjeta} tiene
+         un ${recargo}% a partir de la cuota ${cuotas}`
+         listaTarjetas.appendChild(tarj);
+})
+
+/*
 //Función para la carga de una tarjeta
 function cargarTarjeta(){
     const tarjeta = new Tarjeta; 
@@ -117,3 +167,4 @@ while (!salida){
 menuPrincipal();
 }
 
+*/

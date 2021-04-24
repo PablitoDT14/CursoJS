@@ -9,17 +9,30 @@ body {
 }
 body h1 {
   box-sizing: content-box;
-  padding: 10px;
+  padding: 20px;
   color: #753232;
   text-decoration: underline;
 }
-body form .card_selector, body form .quota_selector {
-  background-color: #d9e9ee;
-  width: 30vw;
+body .formulario {
+  padding: 15px;
+  width: 80vw;
 }
-body form .amount_label {
-  background-color: #d9e9ee;
-  width: 40vw;
+body label {
+  color: white;
+  padding-bottom: 5px;
+}
+body button {
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  margin-left: 15px;
+}
+body button:hover {
+  background-color: green;
+}
+body ol {
+  color: #753232;
+  font-size: 1.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

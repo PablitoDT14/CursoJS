@@ -8,19 +8,30 @@ body{
     background-color: #93a3ce;
     h1{
         box-sizing: content-box;
-        padding: 10px ;
+        padding: 20px ;
         color: #753232;
         text-decoration: underline;
     }
-    form{
-        .card_selector, .quota_selector{
-            background-color: rgb(217, 233, 238);
-            width: 30vw;
+    .formulario{
+        padding: 15px;
+        width: 80vw;
+    }
+    label{
+        color: white;
+        padding-bottom: 5px;
+    }
+    button{
+        background-color: blue;
+        color: white; 
+        padding: 15px;
+        margin-left: 15px;
+        &:hover{
+            background-color: green;
         }
-        .amount_label{
-            background-color: rgb(217, 233, 238);
-            width: 40vw;
-        }
+    }
+    ol{
+        color: #753232;
+        font-size: 1.3rem;
     }
 }
 
