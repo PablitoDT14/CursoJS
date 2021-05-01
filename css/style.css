@@ -13,9 +13,15 @@ body h1 {
   color: #753232;
   text-decoration: underline;
 }
+body .titulo {
+  box-sizing: content-box;
+  padding: 20px;
+  color: green;
+  text-emphasis: bold;
+  text-decoration: underline;
+}
 body .formulario {
   padding: 15px;
-  width: 80vw;
 }
 body label {
   color: white;
@@ -33,6 +39,22 @@ body button:hover {
 body ol {
   color: #753232;
   font-size: 1.3rem;
+  margin-left: 80px;
+}
+body .detalles {
+  display: flex;
+}
+body .detalles section {
+  margin-left: 40px;
+  flex-direction: column;
+  width: 49%;
+  color: lightgrey;
+  flex-direction: column;
+}
+body .detalles section img {
+  padding-left: 200px;
+  width: 700px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */

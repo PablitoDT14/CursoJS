@@ -7,8 +7,10 @@ let salida=false;
 class Tarjeta {
     constructor (tipoTarjeta, recargo, cuotas){
         this.cuotas=cuotas;
+        this.id= (tarjetas.length)+1;
         this.recargo=recargo;
         this.tipoTarjeta = tipoTarjeta;
+        
     }
 }
 
@@ -23,6 +25,17 @@ const inputTarjeta = document.getElementById('input-tarjeta');
 const inputCuotas = document.getElementById('input-cuotas');
 const inputRecargo = document.getElementById('input-recargo');
 const listaTarjetas = document.getElementById('tarjetas-list');
+const listaDetalles = document.getElementById('details-list');
+const detailsTc = document.getElementById('details');
+const titulo = document.getElementById('titulo');
+
+titulo.addEventListener('mouseover',(event)=>{
+    titulo.className="titulo"
+})
+
+titulo.addEventListener('mouseleave',(event)=>{
+    titulo.className=""
+})
 
 const obtenerTarjetas =() => {
     return tarjetas;
@@ -35,13 +48,29 @@ const crearTarjeta = tarjeta =>{
 const mostrarTarjetas = (tarjetas) =>{
     for (let i=0; i< tarjetas.length; i++){
         let tarj = document.createElement('li')
-        tarj.textContent =  `La tarjeta ${tarjetas[i].tipoTarjeta} tiene
-         un ${tarjetas[i].recargo}% a partir de la cuota ${tarjetas[i].cuotas}`
-         listaTarjetas.appendChild(tarj);
+        tarj.textContent =  (`${tarjetas[i].tipoTarjeta}.`).toUpperCase()
+        listaTarjetas.appendChild(tarj);
     }
     
 }
 mostrarTarjetas(tarjetas)
+
+const mostrarDetalle = (detalle) =>{
+    for (let i=0; i< detalle.length; i++){
+        let tarj2 = document.createElement('li')
+        tarj2.textContent =  `La tarjeta ${detalle[i].tipoTarjeta} tiene
+         un ${detalle[i].recargo}% a partir de la cuota ${detalle[i].cuotas}`
+         listaDetalles.appendChild(tarj2);
+    }
+}
+
+detailsTc.addEventListener('click', (event)=>{
+    listaDetalles.innerHTML=''
+    mostrarDetalle(tarjetas) 
+})
+
+
+
 
 altaTarjeta.addEventListener('submit', (event) =>{
     event.preventDefault();
@@ -58,9 +87,10 @@ altaTarjeta.addEventListener('submit', (event) =>{
     inputRecargo.value = '';
 
     let tarj = document.createElement('li');
-    tarj.textContent =  `La tarjeta ${tipoTarjeta} tiene
-         un ${recargo}% a partir de la cuota ${cuotas}`
+    tarj.textContent =  (`${tipoTarjeta}.`).toUpperCase()
+         tarj.setAttribute("id","card-"+tarjeta.id)
          listaTarjetas.appendChild(tarj);
+         listaDetalles.innerHTML=''
 })
 
 /*

@@ -12,9 +12,15 @@ body{
         color: #753232;
         text-decoration: underline;
     }
+    .titulo{
+        box-sizing: content-box;
+        padding: 20px ;
+        color: green;
+        text-emphasis: bold;
+        text-decoration: underline;
+    }
     .formulario{
         padding: 15px;
-        width: 80vw;
     }
     label{
         color: white;
@@ -32,6 +38,22 @@ body{
     ol{
         color: #753232;
         font-size: 1.3rem;
+        margin-left: 80px;
     }
+    .detalles{
+        display: flex;
+        section{
+            margin-left: 40px;
+            flex-direction: column;
+            width: 49%;
+            color: lightgrey;
+            flex-direction: column;
+            img{
+                padding-left: 200px;
+                width: 700px;
+                height: 300px;
+            }
+        }
+}
 }
 
