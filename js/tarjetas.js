@@ -5,7 +5,7 @@ let salida=false;
 
 // Clase Tarjeta
 class Tarjeta {
-    constructor (tipoTarjeta, recargo, cuotas){
+    constructor (tipoTarjeta, cuotas, recargo){
         this.cuotas=cuotas;
         this.id= (tarjetas.length)+1;
         this.recargo=recargo;
