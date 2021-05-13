@@ -6,6 +6,7 @@
 
 body{
     background-color: #93a3ce;
+    
     h1{
         box-sizing: content-box;
         padding: 20px ;
@@ -21,12 +22,18 @@ body{
     }
     .formulario{
         padding: 15px;
+        label{
+            color: white;
+        }   
     }
-    label{
-        color: white;
-        padding-bottom: 5px;
+
+    h2{
+        color: black;
+        padding-bottom: 20px;
+        text-decoration: underline;
     }
     button{
+        margin-top: 15px;
         background-color: blue;
         color: white; 
         padding: 15px;
@@ -44,10 +51,16 @@ body{
         display: flex;
         section{
             margin-left: 40px;
-            flex-direction: column;
             width: 49%;
             color: lightgrey;
             flex-direction: column;
+            h3{
+                padding:15px 0 8px 0;
+            }
+            hr{
+                margin-top: 10px;
+                border: 1px dashed;
+            }
             img{
                 padding-left: 200px;
                 width: 700px;

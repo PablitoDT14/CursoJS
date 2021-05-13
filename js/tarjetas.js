@@ -1,4 +1,3 @@
-alert('Bienvenido a la terminal de carga de tarjetas para el sistema de ventas.');
 let option;
 let salida=false;
 

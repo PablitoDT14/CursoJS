@@ -23,11 +23,16 @@ body .titulo {
 body .formulario {
   padding: 15px;
 }
-body label {
+body .formulario label {
   color: white;
-  padding-bottom: 5px;
+}
+body h2 {
+  color: black;
+  padding-bottom: 20px;
+  text-decoration: underline;
 }
 body button {
+  margin-top: 15px;
   background-color: blue;
   color: white;
   padding: 15px;
@@ -46,10 +51,16 @@ body .detalles {
 }
 body .detalles section {
   margin-left: 40px;
-  flex-direction: column;
   width: 49%;
   color: lightgrey;
   flex-direction: column;
+}
+body .detalles section h3 {
+  padding: 15px 0 8px 0;
+}
+body .detalles section hr {
+  margin-top: 10px;
+  border: 1px dashed;
 }
 body .detalles section img {
   padding-left: 200px;

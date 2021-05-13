@@ -4,34 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Desafío 6 - Segunda entrega proyecto final</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>Desafío 7 - Incorporando JQuery</title>
 </head>
 <body>
     <h1 id="titulo">Administración de Tarjetas</h1>
     <div class="detalles">
         <section>
+            
         <form id="alta-tarjeta" class="formulario">
-            <label for="tarjeta">Ingresá la tarjeta que querés registrar</label>
-            <div class="input-group mb-3 amount_label" name="tarjeta" id="tarjeta">
-                <input id="input-tarjeta" required="true" autocomplete="off" type="text" class="form-control">
+            <h2>Alta tarjetas</h2>
+            <label for="tarjeta" class="etiquetas">Ingresá la tarjeta que querés registrar</label>
+            <div class="" name="tarjeta" id="tarjeta">
+                <input required="true" id="input-tarjeta" autocomplete="off" type="text" class="form-control">
             </div>
-            <label for="cuotas">¿A partir de qué cuota tiene recargo?</label>
-            <div class="input-group mb-3 amount_label" name="cuotas" id="cuotas">
-                <input id="input-cuotas" required="true" autocomplete="off" type="number" class="form-control">
+            <label for="cuotas" class="etiquetas">¿A partir de qué cuota tiene recargo?</label>
+            <div class="" name="cuotas" id="cuotas">
+                <input id="input-cuotas" required="true" autocomplete="off" type="number" min=1 max=12 class="form-control">
             </div>
-            <label for="recargo">Ingresá el porcentaje de recargo (solo números)</label>
-            <div class="input-group mb-3 amount_label" name="recargo" id="recargo">
-                <input id="input-recargo" required="true" autocomplete="off" type="number" class="form-control">
-                <span class="input-group-text">%</span>
-            </div>
-            <hr>
-            <button>Guardar</button>
+            <label for="recargo" class="etiquetas">Ingresá el porcentaje de recargo (solo números)</label>
+            <div class="" name="recargo" id="recargo">
+                <input id="input-recargo" required="true" autocomplete="off" type="number" min=0 max=100 class="form-control">
+                <span class="">%</span>
+            </div> 
+            <button id="guardar-tc">Guardar</button>
         </form>
         </section>
-        <section>
-            <img src="images/tc.jpg" alt="Tarjetas de crédito">
+        <section class="formulario cliente">
+            <h2>Cálculos para el cliente</h2>
+            <label for="monto-cliente">Ingrese el monto que desea abonar con tarjeta</label>
+            <div>
+                <input type="number" min=1 required="true">
+            </div>
+                <label for="cuotas-cliente">Ingrese en cuantas cuotas desea abonarlo</label>
+            <div>
+                <input type="number" min=1 max=12 required="true">
+            </div>
+                <label for="tarjeta-cliente">Elija una tarjeta para abonarlo</label>
+            <div>
+                <select name="" id="seleccion-tc" required="true"></select>
+            </div>
+            <button>Calcular</button>
+            <!-- <img src="images/tc.jpg" alt="Tarjetas de crédito"> -->
         </section>
     </div>
     <hr>
@@ -39,16 +54,15 @@
         <section>
             <h3>Tarjetas</h3>
             <ol id="tarjetas-list"></ol>
+            <hr>
+            <button id="details">Detalles</button>
+            <ol id="details-list"></ol>
         </section>
 
         <section>
-            <h3 id="details">Detalles</h3>
-            <ol id="details-list"></ol>
+            <h3>Resumen de operación</h3>
         </section>
     </div>  
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    <!-- <script src="js/simulador.js"></script> -->
-    <script src="js/tarjetas.js"></script>
+    <script src="js/desafio.js"></script>
 </body>
 </html>
