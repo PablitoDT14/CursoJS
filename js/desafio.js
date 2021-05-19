@@ -31,7 +31,7 @@ const limpiarFormulario = ()=>{
     $(`#input-recargo`).val('')
 }
 
-$('#guardar-tc').submit(function (saveTc) { 
+$('#alta-tarjeta').submit(function (saveTc) { 
     saveTc.preventDefault();
     const tipoTarjeta = ($('#input-tarjeta').val()).toUpperCase()
     const cuotas = $('#input-cuotas').val()
