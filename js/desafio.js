@@ -14,8 +14,16 @@ if (!tarjetas){
     tarjetas=[];
 }
 
-$(`h1#titulo`).mouseover( ()=> { $('h1#titulo').addClass("titulo")})
+$(`h1#titulo`).mouseover( ()=> { 
+    $('h1#titulo').addClass("titulo")
+    $(`h1#titulo`).click( () => {$('h1#titulo').animate({
+        opacity:'1'
+    },2000)})
+})
 $(`h1#titulo`).mouseleave( ()=> { $('h1#titulo').removeClass("titulo")})
+$(`h1#titulo`).click( () => {$('h1#titulo').animate({
+    opacity:'0.5'
+},2000)})
 
 const obtenerTarjetas =() => {
     return tarjetas;
@@ -43,6 +51,8 @@ $('#alta-tarjeta').submit(function (saveTc) {
     $('#tarjetas-list').append(`<li id="${tarjeta.id}">${tarjeta.tipoTarjeta}.</li>`);
     $('#details-list').html('');
     $(`#seleccion-tc`).append(`<option>${tarjeta.tipoTarjeta}</option>`);
+    $('#details').show()
+    $('#hide-details').hide()
 });
 
 const mostrarTarjetas = (showTarjetas) =>{
@@ -62,11 +72,20 @@ const mostrarDetalle = (detalle) =>{
 }
 
 $('#details').click(function (detallar) { 
-        detallar.preventDefault();
-        $('#details-list').html('');
-        mostrarDetalle(tarjetas) 
-    });
+    detallar.preventDefault();
+    $('#details-list').html('');
+    mostrarDetalle(tarjetas)
+    $('#details-list').fadeIn(700,()=> {$('#details-list')})
+    $('#details').hide()
+    $('#hide-details').show()
+});
 
+$('#hide-details').click(function (noDetallar) { 
+    noDetallar.preventDefault();
+    $('#details-list').fadeOut(700,()=> {$('#details-list').html('')})
+    $('#details').show()
+    $('#hide-details').hide()
+});
 
 
 

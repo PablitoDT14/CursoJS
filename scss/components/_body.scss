@@ -16,7 +16,7 @@ body{
     .titulo{
         box-sizing: content-box;
         padding: 20px ;
-        color: green;
+        background-color: #5da6d6;
         text-emphasis: bold;
         text-decoration: underline;
     }
@@ -25,6 +25,9 @@ body{
         label{
             color: white;
         }   
+        input{
+            margin: 3px 0 8px 0;
+        }
     }
 
     h2{
@@ -33,14 +36,17 @@ body{
         text-decoration: underline;
     }
     button{
+        border-radius: 20px;
         margin-top: 15px;
-        background-color: blue;
+        background-color: silver;
         color: white; 
         padding: 15px;
-        margin-left: 15px;
         &:hover{
-            background-color: green;
+            background-color: goldenrod;
         }
+    }
+    #hide-details{
+        display:none;
     }
     ol{
         color: #753232;
@@ -61,10 +67,12 @@ body{
                 margin-top: 10px;
                 border: 1px dashed;
             }
-            img{
-                padding-left: 200px;
-                width: 700px;
-                height: 300px;
+            #tarjetas-list, #details-list{
+                margin: 10px 0 3px 25px;
+                font-size: 1.25rem;
+                li{
+                    padding-bottom: 5px;
+                }
             }
         }
 }

@@ -16,7 +16,7 @@ body h1 {
 body .titulo {
   box-sizing: content-box;
   padding: 20px;
-  color: green;
+  background-color: #5da6d6;
   text-emphasis: bold;
   text-decoration: underline;
 }
@@ -26,20 +26,26 @@ body .formulario {
 body .formulario label {
   color: white;
 }
+body .formulario input {
+  margin: 3px 0 8px 0;
+}
 body h2 {
   color: black;
   padding-bottom: 20px;
   text-decoration: underline;
 }
 body button {
+  border-radius: 20px;
   margin-top: 15px;
-  background-color: blue;
+  background-color: silver;
   color: white;
   padding: 15px;
-  margin-left: 15px;
 }
 body button:hover {
-  background-color: green;
+  background-color: goldenrod;
+}
+body #hide-details {
+  display: none;
 }
 body ol {
   color: #753232;
@@ -62,10 +68,12 @@ body .detalles section hr {
   margin-top: 10px;
   border: 1px dashed;
 }
-body .detalles section img {
-  padding-left: 200px;
-  width: 700px;
-  height: 300px;
+body .detalles section #tarjetas-list, body .detalles section #details-list {
+  margin: 10px 0 3px 25px;
+  font-size: 1.25rem;
+}
+body .detalles section #tarjetas-list li, body .detalles section #details-list li {
+  padding-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

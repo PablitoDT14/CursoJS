@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <title>Desafío 7 - Incorporando JQuery</title>
+    <title>Desafío - Tercera entrega + AJAX </title>
 </head>
 <body>
     <h1 id="titulo">Administración de Tarjetas</h1>
@@ -46,7 +46,6 @@
                 <select name="" id="seleccion-tc" required="true"></select>
             </div>
             <button>Calcular</button>
-            <!-- <img src="images/tc.jpg" alt="Tarjetas de crédito"> -->
         </section>
     </div>
     <hr>
@@ -55,12 +54,16 @@
             <h3>Tarjetas</h3>
             <ol id="tarjetas-list"></ol>
             <hr>
-            <button id="details">Detalles</button>
+            <button id="details">Mostrar detalles</button>
+            <button id="hide-details">Ocultar detalles</button>
             <ol id="details-list"></ol>
         </section>
 
         <section>
-            <h3>Resumen de operación</h3>
+            <h3>Clientes dados de alta</h3>
+            <ol class="details">
+
+            </section>
         </section>
     </div>  
     <script src="js/desafio.js"></script>

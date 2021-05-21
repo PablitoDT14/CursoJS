@@ -1,113 +1,4 @@
-let option;
-let salida=false;
-
-
-// Clase Tarjeta
-class Tarjeta {
-    constructor (tipoTarjeta, recargo, cuotas){
-        this.cuotas=cuotas;
-        this.id= (tarjetas.length)+1;
-        this.recargo=recargo;
-        this.tipoTarjeta = tipoTarjeta;
-        
-    }
-}
-
-let tarjetas = JSON.parse(localStorage.getItem('tarjetas'));
-
-if (!tarjetas){
-    tarjetas=[];
-}
-
-const altaTarjeta = document.getElementById('alta-tarjeta');
-const inputTarjeta = document.getElementById('input-tarjeta');
-const inputCuotas = document.getElementById('input-cuotas');
-const inputRecargo = document.getElementById('input-recargo');
-const listaTarjetas = document.getElementById('tarjetas-list');
-const listaDetalles = document.getElementById('details-list');
-const detailsTc = document.getElementById('details');
-const titulo = document.getElementById('titulo');
-
-titulo.addEventListener('mouseover',(event)=>{
-    titulo.className="titulo"
-})
-
-titulo.addEventListener('mouseleave',(event)=>{
-    titulo.className=""
-})
-
-const obtenerTarjetas =() => {
-    return tarjetas;
-}
-
-const crearTarjeta = tarjeta =>{
-    tarjetas.push(tarjeta)
-}
-
-const mostrarTarjetas = (tarjetas) =>{
-    for (let i=0; i< tarjetas.length; i++){
-        let tarj = document.createElement('li')
-        tarj.textContent =  (`${tarjetas[i].tipoTarjeta}.`).toUpperCase()
-        listaTarjetas.appendChild(tarj);
-    }
-    
-}
-mostrarTarjetas(tarjetas)
-
-const mostrarDetalle = (detalle) =>{
-    for (let i=0; i< detalle.length; i++){
-        let tarj2 = document.createElement('li')
-        tarj2.textContent =  `La tarjeta ${detalle[i].tipoTarjeta} tiene
-         un ${detalle[i].recargo}% a partir de la cuota ${detalle[i].cuotas}`
-         listaDetalles.appendChild(tarj2);
-    }
-}
-
-detailsTc.addEventListener('click', (event)=>{
-    listaDetalles.innerHTML=''
-    mostrarDetalle(tarjetas) 
-})
-
-
-
-
-altaTarjeta.addEventListener('submit', (event) =>{
-    event.preventDefault();
-    const tipoTarjeta= inputTarjeta.value;
-    const cuotas = inputCuotas.value;
-    const recargo = inputRecargo.value;
-
-    const tarjeta = new Tarjeta(tipoTarjeta, cuotas, recargo);
-    crearTarjeta(tarjeta);
-    localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
-
-    inputTarjeta.value = '';
-    inputCuotas.value = '';
-    inputRecargo.value = '';
-
-    let tarj = document.createElement('li');
-    tarj.textContent =  (`${tipoTarjeta}.`).toUpperCase()
-         tarj.setAttribute("id","card-"+tarjeta.id)
-         listaTarjetas.appendChild(tarj);
-         listaDetalles.innerHTML=''
-})
-
 /*
-//Función para la carga de una tarjeta
-function cargarTarjeta(){
-    const tarjeta = new Tarjeta; 
-    tarjeta.tipoTarjeta = (prompt('Ingresá la tarjeta que querés registrar'));
-        
-    do{
-    tarjeta.cuotas = parseInt(prompt('¿A partir de qué cuota tiene recargo?'));
-    }while((tarjeta.cuotas<0)||(tarjeta.cuotas>12))
-        
-    do{
-    tarjeta.recargo = parseInt(prompt('Ingresá el porcentaje de recargo (solo números)'));
-    }while((tarjeta.recargo<0)||(tarjeta.recargo>100))
-        
-    tarjetas.push(tarjeta);
-}
 
 //Función para la búsqueda de una tarjeta
 function buscarTarjeta(){
@@ -130,13 +21,6 @@ function buscarPosicion(){
     return posicion
 }
 
-//Función para listar las tarjetas
-function verTarjetas(){
-    tarjetas.forEach(tc => {
-        alert(`Listado de tarjetas: 
-    ${tc.tipoTarjeta} tiene un interés del ${tc.recargo}% en la compra en ${tc.cuotas} cuotas o más `)
-    });
-}
 
 //Función para modificar los datos de una tarjeta
 function modificarTarjeta(){
@@ -152,48 +36,6 @@ function eliminarTarjeta(){
     tarjetas.splice(posicion,1);
     alert(`Tarjeta eliminada`)
     
-}
-
-function selector(){
-    do{
-        option = parseInt(prompt('Menu Principal\n 1-Carga de tarjetas \n 2-Ver tarjetas cargadas \n 3-Buscar una tarjeta en particular \n 4-Modificar una tarjeta \n 5-Borrar una tarjeta \n 6-Salir'));
-    } while((option<1)||(option>6))
-    return option;
-}
-
-function salir(){
-    alert('Salida exitosa')
-    return salida=true;
-}
-
-function menuPrincipal(){
-    selector();
-    switch(option){
-        case 1:
-            cargarTarjeta();
-            break;
-        case 2:
-            verTarjetas();
-            break;
-        case 3:
-            buscarTarjeta();
-            break;
-        case 4:
-            modificarTarjeta();
-            break;
-        case 5:
-            eliminarTarjeta();
-            break;
-        case 6:
-            salida= salir();
-            break;
-        default:
-            break;
-    }
-}
-
-while (!salida){
-menuPrincipal();
 }
 
 */
