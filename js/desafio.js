@@ -91,15 +91,22 @@ $('#hide-details').click(function (noDetallar) {
 $('#users').click(function (mostrarUsuarios) { 
     mostrarUsuarios.preventDefault();
     $('#details-users').html('');
-    $.get(`${URL}`, (response, status) =>{
-        if (status === 'success'){
+    // $.get(`${URL}`, (response, status) =>{
+    //     if (status === 'success'){
+    //         for(const user of response){
+    //             $('#details-users').append(`
+    //             <p>${user.userName} - ${user.mail}</p>  
+    //             `) } } })
+    $.ajax({
+        method: "GET",
+        url: `${URL}`,
+        success: function (response) {
             for(const user of response){
-                $('#details-users').append(`
-                <p>${user.userName} - ${user.mail}</p>  
-                `)
-            }
+                             $('#details-users').append(`
+                             <p>${user.userName} - ${user.mail}</p>  
+                            `)
+                         }
         }
-        })
-    
+    });
     
 });
