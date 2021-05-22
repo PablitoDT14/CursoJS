@@ -8,6 +8,7 @@ class Tarjeta {
     }
 }
 
+const URL= './users/users.json'
 let tarjetas = JSON.parse(localStorage.getItem('tarjetas'));
 
 if (!tarjetas){
@@ -87,5 +88,18 @@ $('#hide-details').click(function (noDetallar) {
     $('#hide-details').hide()
 });
 
-
-
+$('#users').click(function (mostrarUsuarios) { 
+    mostrarUsuarios.preventDefault();
+    $('#details-users').html('');
+    $.get(`${URL}`, (response, status) =>{
+        if (status === 'success'){
+            for(const user of response){
+                $('#details-users').append(`
+                <p>${user.userName} - ${user.mail}</p>  
+                `)
+            }
+        }
+        })
+    
+    
+});

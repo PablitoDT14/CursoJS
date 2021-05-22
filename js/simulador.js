@@ -68,14 +68,3 @@ function seleccionar(){
     }
     return monto;   
 }
-
-
-/*Llamado a funciones*/
-monto = ingresarValidar(ingresoMonto,1,montoLimite,validacionMonto);
-console.log(monto);
-tipoTarjeta = ingresarValidar(ingresoTarjeta,1,3,validacionTarjeta);
-console.log(tipoTarjeta);
-cantidadCuotas= ingresarValidar(ingresoCuotas,1,12,validacionCuotas);
-console.log(cantidadCuotas);
-seleccionar();
-alert('Usted estará abonando $'+monto+' en '+cantidadCuotas+" cuota/s de $"+(monto/cantidadCuotas).toFixed(2)+".");

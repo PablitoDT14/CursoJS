@@ -68,11 +68,11 @@ body .detalles section hr {
   margin-top: 10px;
   border: 1px dashed;
 }
-body .detalles section #tarjetas-list, body .detalles section #details-list {
+body .detalles section #tarjetas-list, body .detalles section #details-list, body .detalles section #details-users {
   margin: 10px 0 3px 25px;
   font-size: 1.25rem;
 }
-body .detalles section #tarjetas-list li, body .detalles section #details-list li {
+body .detalles section #tarjetas-list li, body .detalles section #details-list li, body .detalles section #details-users li {
   padding-bottom: 5px;
 }
 
