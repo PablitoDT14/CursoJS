@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <title>Desafío - Tercera entrega + AJAX </title>
+    <title>Administración de Tarjetas de Crédito</title>
 </head>
 <body>
     <h1 id="titulo">Administración de Tarjetas</h1>
     <div class="detalles">
+        
         <section>
-            
         <form id="alta-tarjeta" class="formulario">
             <h2>Alta tarjetas</h2>
             <label for="tarjeta" class="etiquetas">Ingresá la tarjeta que querés registrar</label>
@@ -31,20 +31,27 @@
             <button id="guardar-tc">Guardar</button>
         </form>
         </section>
+
         <section class="formulario cliente">
+            
             <h2>Cálculos para el cliente</h2>
+
             <label for="monto-cliente">Ingrese el monto que desea abonar con tarjeta</label>
             <div>
                 <input type="number" min=1 required="true">
             </div>
+
                 <label for="cuotas-cliente">Ingrese en cuantas cuotas desea abonarlo</label>
             <div>
                 <input type="number" min=1 max=12 required="true">
             </div>
+
                 <label for="tarjeta-cliente">Elija una tarjeta para abonarlo</label>
+                
             <div>
                 <select name="" id="seleccion-tc" required="true"></select>
             </div>
+
             <button>Calcular</button>
         </section>
     </div>

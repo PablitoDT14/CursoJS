@@ -1,4 +1,3 @@
-// Clase Tarjeta
 class Tarjeta {
     constructor (tipoTarjeta, recargo, cuotas){
         this.cuotas=cuotas;
@@ -8,7 +7,7 @@ class Tarjeta {
     }
 }
 
-const URL= './users/users.json'
+const URL= 'https://jsonplaceholder.typicode.com/users'
 let tarjetas = JSON.parse(localStorage.getItem('tarjetas'));
 
 if (!tarjetas){
@@ -91,22 +90,10 @@ $('#hide-details').click(function (noDetallar) {
 $('#users').click(function (mostrarUsuarios) { 
     mostrarUsuarios.preventDefault();
     $('#details-users').html('');
-    // $.get(`${URL}`, (response, status) =>{
-    //     if (status === 'success'){
-    //         for(const user of response){
-    //             $('#details-users').append(`
-    //             <p>${user.userName} - ${user.mail}</p>  
-    //             `) } } })
-    $.ajax({
-        method: "GET",
-        url: `${URL}`,
-        success: function (response) {
+    $.get(`${URL}`, (response, status) =>{
+        if (status === 'success'){
             for(const user of response){
-                             $('#details-users').append(`
-                             <p>${user.userName} - ${user.mail}</p>  
-                            `)
-                         }
-        }
-    });
-    
+                $('#details-users').append(`
+                <p>${user.username} - ${user.email}</p>  
+                `) } } })
 });
