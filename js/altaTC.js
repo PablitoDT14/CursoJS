@@ -7,7 +7,6 @@ class Tarjeta {
     }
 }
 
-const URL= 'https://jsonplaceholder.typicode.com/users'
 let tarjetas = JSON.parse(localStorage.getItem('tarjetas'));
 
 if (!tarjetas){
@@ -87,13 +86,25 @@ $('#hide-details').click(function (noDetallar) {
     $('#hide-details').hide()
 });
 
-$('#users').click(function (mostrarUsuarios) { 
-    mostrarUsuarios.preventDefault();
-    $('#details-users').html('');
-    $.get(`${URL}`, (response, status) =>{
-        if (status === 'success'){
-            for(const user of response){
-                $('#details-users').append(`
-                <p>${user.username} - ${user.email}</p>  
-                `) } } })
-});
+
+function buscarRecargo(seleccionTc){
+    return tarjetas.find(tarjeta => tarjeta.tipoTarjeta === seleccionTc)
+}
+
+const limpiarConsulta = ()=>{
+    $(`#monto-cliente`).val('')
+    $(`#cuotas-cliente`).val('')
+}
+
+$('#formulario-cliente').submit(function (calcCuotas) {
+    calcCuotas.preventDefault()
+    $('#details-calculo').html('')
+    let monto = parseInt($('#monto-cliente').val())
+    const cuotasCliente= parseInt($('#cuotas-cliente').val())
+    const seleccionTc = $('#seleccion-tc').val()
+    const tarjetaElegida = buscarRecargo(seleccionTc)
+    cuotasCliente<tarjetaElegida.cuotas ? monto : monto+=monto*(parseInt(tarjetaElegida.recargo))/100
+    const cuotizado = monto / cuotasCliente
+    $('#details-calculo').append(`El monto a pagar es de $ ${monto} en ${cuotasCliente} cuotas de $ ${cuotizado}`)
+    limpiarConsulta()
+})
