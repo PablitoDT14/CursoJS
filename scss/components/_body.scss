@@ -67,12 +67,19 @@ body{
                 margin-top: 10px;
                 border: 1px dashed;
             }
-            #tarjetas-list, #details-list, #details-calculo{
+            #tarjetas-list, #details-list {
                 margin: 10px 0 3px 25px;
                 font-size: 1.25rem;
                 li{
                     padding-bottom: 5px;
                 }
+            }
+        }
+        #details-calculo{
+            padding: 10px 30px 0 0;
+            p{
+                color: #753232;
+                font-size: 1.3rem;
             }
         }
 }

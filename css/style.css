@@ -68,12 +68,19 @@ body .detalles section hr {
   margin-top: 10px;
   border: 1px dashed;
 }
-body .detalles section #tarjetas-list, body .detalles section #details-list, body .detalles section #details-users {
+body .detalles section #tarjetas-list, body .detalles section #details-list {
   margin: 10px 0 3px 25px;
   font-size: 1.25rem;
 }
-body .detalles section #tarjetas-list li, body .detalles section #details-list li, body .detalles section #details-users li {
+body .detalles section #tarjetas-list li, body .detalles section #details-list li {
   padding-bottom: 5px;
+}
+body .detalles #details-calculo {
+  padding: 10px 30px 0 0;
+}
+body .detalles #details-calculo p {
+  color: #753232;
+  font-size: 1.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

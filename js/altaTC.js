@@ -105,6 +105,6 @@ $('#formulario-cliente').submit(function (calcCuotas) {
     const tarjetaElegida = buscarRecargo(seleccionTc)
     cuotasCliente<tarjetaElegida.cuotas ? monto : monto+=monto*(parseInt(tarjetaElegida.recargo))/100
     const cuotizado = monto / cuotasCliente
-    $('#details-calculo').append(`El monto a pagar es de $ ${monto} en ${cuotasCliente} cuotas de $ ${cuotizado}`)
+    $('#details-calculo').append(`<p>El monto a pagar es de $${monto} en ${cuotasCliente} cuotas de $${cuotizado}</p>`)
     limpiarConsulta()
 })
