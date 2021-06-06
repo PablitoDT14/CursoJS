@@ -1,81 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <title>Administración de Tarjetas de Crédito</title>
 </head>
+
 <body>
     <h1 id="titulo">Administración de Tarjetas</h1>
+    <select class="form-select" id="form-select" aria-label="Default select example">
+        <option selected value='0'>Elegí una de las opciones</option>
+        <option value="alta">Alta de tarjetas</option>
+        <option value="calculo">Cálculos cliente</option>
+        <option value="lista-de-usuarios">Lista de usuarios</option>
+      </select>
     <div class="detalles">
-    
-        <section>
-        <form id="alta-tarjeta" class="formulario">
-            <h2>Alta tarjetas</h2>
-            <label for="tarjeta" class="etiquetas">Ingresá la tarjeta que querés registrar</label>
-            <div class="" name="tarjeta" id="tarjeta">
-                <input required="true" id="input-tarjeta" autocomplete="off" type="text" class="form-control">
-            </div>
-            <label for="cuotas" class="etiquetas">¿A partir de qué cuota tiene recargo?</label>
-            <div class="" name="cuotas" id="cuotas">
-                <input id="input-cuotas" required="true" autocomplete="off" type="number" min=1 max=12 class="form-control">
-            </div>
-            <label for="recargo" class="etiquetas">Ingresá el porcentaje de recargo (solo números)</label>
-            <div class="" name="recargo" id="recargo">
-                <input id="input-recargo" required="true" autocomplete="off" type="number" min=0 max=100 class="form-control">
-                <span class="">%</span>
-            </div> 
-            <button id="guardar-tc">Guardar</button>
-        </form>
-        </section>
 
-        <section>
-            <form class="formulario" id="formulario-cliente">
-            
-            <h2>Cálculos para el cliente</h2>
-
-            <label for="monto-cliente">Ingrese el monto que desea abonar con tarjeta</label>
-            <div>
-                <input type="number" name="monto-cliente" id="monto-cliente" min=1 required="true">
-            </div>
-
-                <label for="cuotas-cliente">Ingrese en cuantas cuotas desea abonarlo</label>
-            <div>
-                <input type="number" min=1 max=12 required="true" id="cuotas-cliente">
-            </div>
-
-                <label for="tarjeta-cliente">Elija una tarjeta para abonarlo</label>
-                
-            <div>
-                <select name="" id="seleccion-tc" required="true"></select>
-            </div>
-
-            <button id="calcular">Calcular</button>
-        </form>
-        </section>
     </div>
-    <hr>
-    <div class="detalles">
-        <section>
-            <h3>Tarjetas</h3>
-            <ol id="tarjetas-list"></ol>
-            <hr>
-            <button id="details">Mostrar detalles</button>
-            <button id="hide-details">Ocultar detalles</button>
-            <ol id="details-list"></ol>
-        </section>
-
-        <section>
-            <h3 id="calculo">Monto por cuotas y total</h3>
-            <div id="details-calculo">
-                
-            </div>
-            </section>
-        </section>
-    </div>  
-    <script src="js/altaTC.js"></script>
+    
+    <script type="module" src="js/MenuPrincipal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
+
 </html>

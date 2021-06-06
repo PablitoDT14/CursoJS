@@ -12,6 +12,15 @@ body h1 {
   padding: 20px;
   color: #753232;
   text-decoration: underline;
+  text-align: center;
+}
+body .form-select {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: #93a3ce;
+  color: #753232;
+  width: 35%;
+  font-weight: bold;
 }
 body .titulo {
   box-sizing: content-box;
@@ -21,6 +30,7 @@ body .titulo {
   text-decoration: underline;
 }
 body .formulario {
+  margin-top: 20px;
   padding: 15px;
 }
 body .formulario label {
@@ -28,11 +38,6 @@ body .formulario label {
 }
 body .formulario input {
   margin: 3px 0 8px 0;
-}
-body h2 {
-  color: black;
-  padding-bottom: 20px;
-  text-decoration: underline;
 }
 body button {
   border-radius: 20px;
@@ -56,7 +61,7 @@ body .detalles {
   display: flex;
 }
 body .detalles section {
-  margin-left: 40px;
+  margin-left: 20px;
   width: 49%;
   color: lightgrey;
   flex-direction: column;
@@ -68,11 +73,13 @@ body .detalles section hr {
   margin-top: 10px;
   border: 1px dashed;
 }
-body .detalles section #tarjetas-list, body .detalles section #details-list {
+body .detalles section #tarjetas-list,
+body .detalles section #details-list {
   margin: 10px 0 3px 25px;
   font-size: 1.25rem;
 }
-body .detalles section #tarjetas-list li, body .detalles section #details-list li {
+body .detalles section #tarjetas-list li,
+body .detalles section #details-list li {
   padding-bottom: 5px;
 }
 body .detalles #details-calculo {
