@@ -8,6 +8,7 @@ body {
   background-color: #93a3ce;
 }
 body h1 {
+  background-color: #393b5c;
   box-sizing: content-box;
   padding: 20px;
   color: #753232;
@@ -81,6 +82,9 @@ body .detalles section #details-list {
 body .detalles section #tarjetas-list li,
 body .detalles section #details-list li {
   padding-bottom: 5px;
+}
+body .detalles .list-group-item {
+  background-color: #93a3ce;
 }
 body .detalles #details-calculo {
   padding: 10px 30px 0 0;

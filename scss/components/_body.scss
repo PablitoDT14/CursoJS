@@ -8,6 +8,7 @@ body {
   background-color: #93a3ce;
 
   h1 {
+      background-color: rgb(57, 59, 92);
     box-sizing: content-box;
     padding: 20px;
     color: #753232;
@@ -17,7 +18,7 @@ body {
   }
 
   .form-select{
-      margin-bottom: 20px;
+    margin-bottom: 20px;
     margin-left: 20px;
     background-color: #93a3ce;
     color: #753232;
@@ -86,6 +87,10 @@ body {
         }
       }
     }
+    .list-group-item{
+        background-color: #93a3ce;
+    }
+
     #details-calculo {
       padding: 10px 30px 0 0;
       p {

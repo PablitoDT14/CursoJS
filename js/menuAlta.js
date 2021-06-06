@@ -86,10 +86,11 @@ const mostrarTarjetas = (showTarjetas) => {
 mostrarTarjetas(tarjetas)
 
 const mostrarDetalle = (detalle) => {
-    for (let i = 0; i < detalle.length; i++) {
-        $('#details-list').append(`<li> La tarjeta ${detalle[i].tipoTarjeta} tiene
-       un ${detalle[i].recargo}% de recargo cuando se realiza la compra en ${detalle[i].cuotas} cuotas o mas.</li>`)
+    for (const detail of detalle) {
+        $('#details-list').append(`<li> La tarjeta ${detail.tipoTarjeta} tiene
+        un ${detail.recargo}% de recargo cuando se realiza la compra en ${detail.cuotas} cuotas o mas.</li>`)  
     }
+  
 }
 
 $('#details').click(function (detallar) {
