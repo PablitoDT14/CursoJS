@@ -5,34 +5,23 @@
 }
 
 body {
-  background-color: #93a3ce;
+  background-color: #cebb93;
 
   h1 {
-      background-color: rgb(57, 59, 92);
+    background-color: #93cebb;
     box-sizing: content-box;
     padding: 20px;
-    color: #753232;
-    text-decoration: underline;
     text-align: center;
 
   }
 
   .form-select{
-    margin-bottom: 20px;
-    margin-left: 20px;
-    background-color: #93a3ce;
-    color: #753232;
+    margin: 25px 0 20px 30px;
+    background-color: #cebb93;
     width: 35%;
     font-weight: bold;
   }
 
-  .titulo {
-    box-sizing: content-box;
-    padding: 20px;
-    background-color: #5da6d6;
-    text-emphasis: bold;
-    text-decoration: underline;
-  }
   .formulario {
     margin-top: 20px;
     padding: 15px;
@@ -51,14 +40,14 @@ body {
     color: white;
     padding: 15px;
     &:hover {
-      background-color: goldenrod;
+      background-color: rgb(122, 122, 122);
     }
   }
   #hide-details {
     display: none;
   }
   ol {
-    color: #753232;
+    color: black;
     font-size: 1.3rem;
     margin-left: 80px;
   }
@@ -68,7 +57,6 @@ body {
     section {
       margin-left: 20px;
       width: 49%;
-      color: lightgrey;
       flex-direction: column;
       h3 {
         padding: 15px 0 8px 0;
@@ -88,13 +76,13 @@ body {
       }
     }
     .list-group-item{
-        background-color: #93a3ce;
+        background-color: #cebb93;
     }
 
     #details-calculo {
       padding: 10px 30px 0 0;
       p {
-        color: #753232;
+        color: black;
         font-size: 1.3rem;
       }
     }

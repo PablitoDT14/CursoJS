@@ -11,12 +11,7 @@ $(`h1#titulo`).mouseover(() => {
         }, 2000)
     })
 })
-$(`h1#titulo`).mouseleave(() => { $('h1#titulo').removeClass("titulo") })
-$(`h1#titulo`).click(() => {
-    $('h1#titulo').animate({
-        opacity: '0.5'
-    }, 2000)
-})
+
 $('#form-select').click(function (menu) { 
     menu.preventDefault();
     const accionable= $('#form-select').val()
@@ -32,6 +27,9 @@ $('#form-select').click(function (menu) {
         case 'lista-de-usuarios': {
             menuUsers()
             break
+        }
+        default: {
+            $('.detalles').html('');
         }
     }
 });

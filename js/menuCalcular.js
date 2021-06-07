@@ -43,8 +43,9 @@ function menuCalcular() {
             $('#formulario-cliente').submit(function (calcCuotas) {
                 calcCuotas.preventDefault()
                 $('#details-calculo').html('')
+                $('#resultado-calculo').remove();
                 $('.detalles').append(`  
-                <section>
+                <section id="resultado-calculo">
                     <h3 id="calculo">Monto por cuotas y total</h3>
                     <div id="details-calculo">
 

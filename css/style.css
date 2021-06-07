@@ -5,30 +5,19 @@
 }
 
 body {
-  background-color: #93a3ce;
+  background-color: #cebb93;
 }
 body h1 {
-  background-color: #393b5c;
+  background-color: #93cebb;
   box-sizing: content-box;
   padding: 20px;
-  color: #753232;
-  text-decoration: underline;
   text-align: center;
 }
 body .form-select {
-  margin-bottom: 20px;
-  margin-left: 20px;
-  background-color: #93a3ce;
-  color: #753232;
+  margin: 25px 0 20px 30px;
+  background-color: #cebb93;
   width: 35%;
   font-weight: bold;
-}
-body .titulo {
-  box-sizing: content-box;
-  padding: 20px;
-  background-color: #5da6d6;
-  text-emphasis: bold;
-  text-decoration: underline;
 }
 body .formulario {
   margin-top: 20px;
@@ -48,13 +37,13 @@ body button {
   padding: 15px;
 }
 body button:hover {
-  background-color: goldenrod;
+  background-color: #7a7a7a;
 }
 body #hide-details {
   display: none;
 }
 body ol {
-  color: #753232;
+  color: black;
   font-size: 1.3rem;
   margin-left: 80px;
 }
@@ -64,7 +53,6 @@ body .detalles {
 body .detalles section {
   margin-left: 20px;
   width: 49%;
-  color: lightgrey;
   flex-direction: column;
 }
 body .detalles section h3 {
@@ -84,13 +72,13 @@ body .detalles section #details-list li {
   padding-bottom: 5px;
 }
 body .detalles .list-group-item {
-  background-color: #93a3ce;
+  background-color: #cebb93;
 }
 body .detalles #details-calculo {
   padding: 10px 30px 0 0;
 }
 body .detalles #details-calculo p {
-  color: #753232;
+  color: black;
   font-size: 1.3rem;
 }
 
