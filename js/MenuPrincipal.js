@@ -12,12 +12,12 @@ $(`h1#titulo`).mouseover(() => {
     })
 })
 
-$('#form-select').click(function (menu) { 
+$('#form-select').click(function (menu) {
     menu.preventDefault();
-    const accionable= $('#form-select').val()
-    switch (accionable){
-        case 'alta' : {
-            menuAlta() 
+    const accionable = $('#form-select').val()
+    switch (accionable) {
+        case 'alta': {
+            menuAlta()
             break
         }
         case 'calculo': {

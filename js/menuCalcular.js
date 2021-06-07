@@ -27,41 +27,41 @@ function menuCalcular() {
         </section>
         `);
 
-        for (const tarjeta of tarjetas) {
-            $(`#seleccion-tc`).append(`<option>${tarjeta.tipoTarjeta.toUpperCase()}</option>`);
-            }
+    for (const tarjeta of tarjetas) {
+        $(`#seleccion-tc`).append(`<option>${tarjeta.tipoTarjeta.toUpperCase()}</option>`);
+    }
 
-            function buscarRecargo(seleccionTc) {
-                return tarjetas.find(tarjeta => tarjeta.tipoTarjeta === seleccionTc)
-            }
-            
-            const limpiarConsulta = () => {
-                $(`#monto-cliente`).val('')
-                $(`#cuotas-cliente`).val('')
-            }
-            
-            $('#formulario-cliente').submit(function (calcCuotas) {
-                calcCuotas.preventDefault()
-                $('#details-calculo').html('')
-                $('#resultado-calculo').remove();
-                $('.detalles').append(`  
+    function buscarRecargo(seleccionTc) {
+        return tarjetas.find(tarjeta => tarjeta.tipoTarjeta === seleccionTc)
+    }
+
+    const limpiarConsulta = () => {
+        $(`#monto-cliente`).val('')
+        $(`#cuotas-cliente`).val('')
+    }
+
+    $('#formulario-cliente').submit(function (calcCuotas) {
+        calcCuotas.preventDefault()
+        $('#details-calculo').html('')
+        $('#resultado-calculo').remove();
+        $('.detalles').append(`  
                 <section id="resultado-calculo">
                     <h3 id="calculo">Monto por cuotas y total</h3>
                     <div id="details-calculo">
 
                     </div>
                 </section>`
-            );
-                let monto = parseInt($('#monto-cliente').val())
-                const cuotasCliente = parseInt($('#cuotas-cliente').val())
-                const seleccionTc = $('#seleccion-tc').val()
-                const tarjetaElegida = buscarRecargo(seleccionTc)
-                cuotasCliente < tarjetaElegida.cuotas ? monto : monto += monto * (parseInt(tarjetaElegida.recargo)) / 100
-                const cuotizado = monto / cuotasCliente
-                $('#details-calculo').append(`<p>El monto a pagar es de $${monto} en ${cuotasCliente} cuotas de $${cuotizado}</p>`)
-                limpiarConsulta()
-            })
-            
+        );
+        let monto = parseInt($('#monto-cliente').val())
+        const cuotasCliente = parseInt($('#cuotas-cliente').val())
+        const seleccionTc = $('#seleccion-tc').val()
+        const tarjetaElegida = buscarRecargo(seleccionTc)
+        cuotasCliente < tarjetaElegida.cuotas ? monto : monto += monto * (parseInt(tarjetaElegida.recargo)) / 100
+        const cuotizado = monto / cuotasCliente
+        $('#details-calculo').append(`<p>El monto a pagar es de $${monto} en ${cuotasCliente} cuotas de $${cuotizado}</p>`)
+        limpiarConsulta()
+    })
+
 }
 
 export default menuCalcular;
