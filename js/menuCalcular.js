@@ -57,7 +57,7 @@ function menuCalcular() {
         const seleccionTc = $('#seleccion-tc').val()
         const tarjetaElegida = buscarRecargo(seleccionTc)
         cuotasCliente < tarjetaElegida.cuotas ? monto : monto += monto * (parseInt(tarjetaElegida.recargo)) / 100
-        const cuotizado = monto / cuotasCliente
+        const cuotizado = (monto / cuotasCliente).toFixed(2)
         $('#details-calculo').append(`<p>El monto a pagar es de $${monto} en ${cuotasCliente} cuotas de $${cuotizado}</p>`)
         limpiarConsulta()
     })
